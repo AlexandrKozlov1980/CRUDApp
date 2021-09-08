@@ -5,32 +5,18 @@
     <title>New user</title>
 </head>
 <body>
-<!--<form method="POST" action="@{/}">-->
-<!--    <div>-->
-<!--    <label for="name">Имя:</label>-->
-<!--    <input name="name" type="text" id="name">-->
-
-<!--<br>-->
-<!--        <label for="lastname">Фамилия:</label>-->
-<!--        <input name="lastname" type="text" id="lastname">-->
-
-<!--        <br>-->
-
-<!--        <label for="email">Почта:</label>-->
-<!--        <input name="email" type="text" id="email">-->
-
-<!--        <br>-->
-
-
-<!--    <input type="submit" value="Создать"/>-->
-<!--    </div>-->
-
 <form th:method="POST" th:action="@{/}" th:object="${user}">
 
-    <label for="name">Имя</label>
+    <label for="name">Имя     </label>
     <input type="text" th:field="*{name}" id="name"/>
     <br/>
-    <input type="submit" value="Create"/>
+    <label for="lastName">Фамилия</label>
+    <input type="text" th:field="*{lastName}" id="lastName"/>
+    <br/>
+    <label for="eMail">Почта</label>
+    <input type="text" th:field="*{eMail}" id="eMail"/>
+    <br/>
+    <input type="submit" value="Создать"/>
 
 </form>
 </body>

@@ -15,10 +15,10 @@ public class UserDaoImpl implements UserDao{
     {
         users = new ArrayList<>();
 
-        users.add(new User(++PEOPLE_COUNT, "Anna"/*, "Ivnova", "mail@google.com"*/));
-        users.add(new User(++PEOPLE_COUNT, "Nikolai"/*, "Ivanov", "mail@yandex.ru"*/));
-        users.add(new User(++PEOPLE_COUNT, "Olga"/*, "Petrova", "mail@mail.ru"*/));
-        users.add(new User(++PEOPLE_COUNT, "Elena"/*, "Sidorova", "mail@yahhoo.com"*/));
+        users.add(new User(++PEOPLE_COUNT, "Anna", "Ivnova", "mail@google.com"));
+        users.add(new User(++PEOPLE_COUNT, "Nikolai", "Ivanov", "mail@yandex.ru"));
+        users.add(new User(++PEOPLE_COUNT, "Olga", "Petrova", "mail@mail.ru"));
+        users.add(new User(++PEOPLE_COUNT, "Elena", "Sidorova", "mail@yahhoo.com"));
 
     }
 
