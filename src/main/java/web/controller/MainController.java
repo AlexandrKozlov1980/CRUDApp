@@ -27,6 +27,12 @@ public class MainController {
         return "main/index";
     }
 
+    @GetMapping("/{id}")
+    public String showUser(@PathVariable("id") Integer id, Model model){
+        model.addAttribute("user", userService.showUser(id));
+        return "main/showUser";
+    }
+
     @GetMapping("/new")
     public String newUser(Model model){
         model.addAttribute("user", new User());
@@ -40,8 +46,5 @@ public class MainController {
         return "redirect:/";
     }
 
-    @GetMapping("/showUser")
-    public String showUser(){
-        return "main/showUser";
-    }
+
 }

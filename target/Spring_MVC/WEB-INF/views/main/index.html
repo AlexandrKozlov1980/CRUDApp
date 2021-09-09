@@ -18,7 +18,11 @@
         <tr th:each="usr : ${users}">
             <td th:utext="${usr.getId()}"></td>
 
-            <td><a th:href="@{/showUser(id=${usr.getId()})}" th:utext="${usr.getName()}">r</a></td>
+<!--            <td th:utext="${usr.getName()}"></td>-->
+
+<!--            <a th:href="@{/people/{id}(id=${usr.getId()})}" th:text="${usr.getName()}">r</a>-->
+
+            <td><a th:href="@{/{id}(id=${usr.getId()})}" th:utext="${usr.getName()}">r</a></td>
 
             <td th:utext="${usr.getLastName()}"></td>
             <td th:utext="${usr.geteMail()}"></td>
