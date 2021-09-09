@@ -39,4 +39,9 @@ public class MainController {
         System.out.println(user);
         return "redirect:/";
     }
+
+    @GetMapping("/showUser")
+    public String showUser(){
+        return "main/showUser";
+    }
 }

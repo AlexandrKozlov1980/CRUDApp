@@ -7,5 +7,9 @@ import java.util.List;
 public interface UserService {
     List<User> showAllUsers();
 
+    public User showUser(Integer id);
+
     public void createUser(User user);
+
+    public List<User> deleteUser(Integer id);
 }

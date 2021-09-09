@@ -30,9 +30,20 @@ public class UserDaoImpl implements UserDao{
     }
 
     @Override
+    public User showUser(Integer id){
+        return users.stream().filter(person ->person.getId() == id).findAny().orElse(null);
+    }
+
+    @Override
     public void createUser(User user) {
         user.setId(++PEOPLE_COUNT);
         users.add(user);
 
+    }
+
+    @Override
+    public List<User> deleteUser(Integer id) {
+        users.remove(id);
+        return users;
     }
 }

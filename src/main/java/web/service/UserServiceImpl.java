@@ -9,8 +9,11 @@ import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService{
-    @Autowired
-    private UserDaoImpl userDao;
+    private final UserDaoImpl userDao;
+
+    public UserServiceImpl(UserDaoImpl userDao) {
+        this.userDao = userDao;
+    }
 
     @Override
     public List<User> showAllUsers() {
@@ -18,7 +21,17 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    public User showUser(Integer id){
+        return userDao.showUser(id);
+    }
+
+    @Override
     public void createUser(User user) {
         userDao.createUser(user);
+    }
+
+    @Override
+    public List<User> deleteUser(Integer id) {
+        return userDao.deleteUser(id);
     }
 }

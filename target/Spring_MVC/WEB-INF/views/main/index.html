@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http:thymeleaf.org">
+<html lang="ru" xmlns:th="http:thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title></title>
@@ -17,7 +17,9 @@
 
         <tr th:each="usr : ${users}">
             <td th:utext="${usr.getId()}"></td>
-            <td th:utext="${usr.getName()}"></td>
+
+            <td><a th:href="@{/showUser(id=${usr.getId()})}" th:utext="${usr.getName()}">r</a></td>
+
             <td th:utext="${usr.getLastName()}"></td>
             <td th:utext="${usr.geteMail()}"></td>
         </tr>
@@ -26,9 +28,9 @@
 
         <a href="/new">Создать пользователя</a>
         <br>
-        <a href="/new">Удалить пользователя</a>
-        <br>
-        <a href="/new">Изменить пользователя</a>
+<!--        <a href="/showUser">Показать пользователя</a>-->
+<!--        <br>-->
+<!--        <a href="/new">Изменить пользователя</a>-->
 
     </table>
 <br>
