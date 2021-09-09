@@ -34,4 +34,9 @@ public class UserServiceImpl implements UserService{
     public List<User> deleteUser(Integer id) {
         return userDao.deleteUser(id);
     }
+
+    @Override
+    public void updateUser(Integer id, User updatedUser) {
+        userDao.updateUser(id, updatedUser);
+    }
 }

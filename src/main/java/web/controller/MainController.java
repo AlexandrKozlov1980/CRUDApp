@@ -46,5 +46,11 @@ public class MainController {
         return "redirect:/";
     }
 
+    @GetMapping("/{id}/edit")
+    public String updateUser(Model model, @PathVariable("id") Integer id){
+        model.addAttribute("user", userService.showUser(id));
+        return "main/editUser";
+    }
+
 
 }
