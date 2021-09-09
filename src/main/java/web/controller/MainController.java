@@ -52,5 +52,12 @@ public class MainController {
         return "main/editUser";
     }
 
+    @PatchMapping("/{id}")
+    public String update(@ModelAttribute("user") User user, @PathVariable("id") Integer id){
+        userService.updateUser(id, user);
+        return "redirect:/";
+
+    }
+
 
 }

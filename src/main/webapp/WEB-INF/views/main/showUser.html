@@ -20,15 +20,23 @@
             <td th:utext="${usr.getLastName()}"></td>
             <td th:utext="${usr.geteMail()}"></td>
         </tr>
-
-        <br>
-
-        <a href="/editUser">Изменить пользователя</a>
-        <br>
+<!--        <br>-->
+<!--        <a href="/new">Изменить пользователя</a>-->
+<!--        <br>-->
     </table>
     <br>
+    <a th:href="@{/{id}/edit(id=${user.getId()})}">Изменить пользователя</a>
+    <br>
 
+    <form th:method="DELETE" th:action="@{/people/{id}(id=${user.getId()})}">
+        <input type="submit" value="Изменить пользователя">
+    </form>
+
+    <form th:method="DELETE" th:action="@{/people/{id}(id=${user.getId()})}">
+        <input type="submit" value="Удалить пользователя">
+    </form>
 
 </div>
+
 </body>
 </html>

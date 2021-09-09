@@ -22,7 +22,7 @@
 
 <!--            <a th:href="@{/people/{id}(id=${usr.getId()})}" th:text="${usr.getName()}">r</a>-->
 
-            <td><a th:href="@{/{id}(id=${usr.getId()})}" th:utext="${usr.getName()}">r</a></td>
+            <td><a th:href="@{/{id}(id=${usr.getId()})}" th:utext="${usr.getName()}"></a></td>
 
             <td th:utext="${usr.getLastName()}"></td>
             <td th:utext="${usr.geteMail()}"></td>
