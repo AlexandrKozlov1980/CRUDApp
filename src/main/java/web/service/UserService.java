@@ -11,7 +11,8 @@ public interface UserService {
 
     public void createUser(User user);
 
-    public List<User> deleteUser(Integer id);
-
     public void updateUser(Integer id, User updatedUser);
+
+    public void deleteUser(Integer id);
+
 }

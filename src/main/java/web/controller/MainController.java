@@ -59,5 +59,11 @@ public class MainController {
 
     }
 
+    @DeleteMapping("/{id}")
+    public String delete(@PathVariable("id") Integer id){
+        userService.deleteUser(id);
+        return "redirect:/";
+    }
+
 
 }

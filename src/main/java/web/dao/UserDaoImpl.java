@@ -42,16 +42,15 @@ public class UserDaoImpl implements UserDao{
     }
 
     @Override
-    public List<User> deleteUser(Integer id) {
-        users.remove(id);
-        return users;
-    }
-
-    @Override
     public void updateUser(Integer id, User updatedUser) {
         User userToBeUpdated = showUser(id);
         userToBeUpdated.setName(updatedUser.getName());
         userToBeUpdated.setLastName(updatedUser.getLastName());
         userToBeUpdated.seteMail(updatedUser.geteMail());
+    }
+
+    @Override
+    public void deleteUser(Integer id){
+        users.removeIf(p -> p.getId() == id);
     }
 }

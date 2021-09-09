@@ -27,18 +27,25 @@
             <td th:utext="${usr.getLastName()}"></td>
             <td th:utext="${usr.geteMail()}"></td>
         </tr>
-
         <br>
 
-        <a href="/new">Создать пользователя</a>
         <br>
-<!--        <a href="/showUser">Показать пользователя</a>-->
-<!--        <br>-->
-<!--        <a href="/new">Изменить пользователя</a>-->
-
+        <form method="GET" action="/new">
+            <input type="submit" value="Создать пользователя">
+        </form>
     </table>
 <br>
+    <a th:href="@{/{id}/edit(id=${usr.getId()})}">Изменить пользователя</a>
 
+    <br>
+    <br>
+
+
+    <a href="/new">Создать пользователя</a>
+
+    <form method="GET" action="/new">
+        <input type="submit" value="Изменить пользователя">
+    </form>
 
 </div>
 </body>

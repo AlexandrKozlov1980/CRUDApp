@@ -25,14 +25,13 @@
 <!--        <br>-->
     </table>
     <br>
-    <a th:href="@{/{id}/edit(id=${user.getId()})}">Изменить пользователя</a>
-    <br>
+<!--    <a th:href="@{/{id}/edit(id=${user.getId()})}">Изменить пользователя</a>-->
 
-    <form th:method="DELETE" th:action="@{/people/{id}(id=${user.getId()})}">
+    <form th:method="GET" th:action="@{/{id}/edit(id=${user.getId()})}">
         <input type="submit" value="Изменить пользователя">
     </form>
-
-    <form th:method="DELETE" th:action="@{/people/{id}(id=${user.getId()})}">
+<br>
+    <form th:method="DELETE" th:action="@{/{id}(id=${user.getId()})}">
         <input type="submit" value="Удалить пользователя">
     </form>
 
