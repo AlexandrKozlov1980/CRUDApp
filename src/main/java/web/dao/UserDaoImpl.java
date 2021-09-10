@@ -1,5 +1,7 @@
 package web.dao;
 
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import web.model.User;
 
@@ -12,6 +14,9 @@ public class UserDaoImpl implements UserDao{
     private static int PEOPLE_COUNT;
     private List<User> users;
 
+//    @Autowired
+//    private SessionFactory sessionFactory;
+
     {
         users = new ArrayList<>();
 
@@ -20,6 +25,7 @@ public class UserDaoImpl implements UserDao{
         users.add(new User(++PEOPLE_COUNT, "Olga", "Petrova", "mail@mail.ru"));
         users.add(new User(++PEOPLE_COUNT, "Elena", "Sidorova", "mail@yahhoo.com"));
 
+        //sessionFactory.getCurrentSession().save(new User("Anna", "Ivnova", "mail@google.com"));
     }
 
 
