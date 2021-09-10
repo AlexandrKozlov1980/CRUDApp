@@ -15,8 +15,8 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 
-@Configuration
-@EnableTransactionManagement
+//@Configuration
+//@EnableTransactionManagement
 public class PersistenceJPAConfig {
 //    @Bean
 //    public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
